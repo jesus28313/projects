@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Spring Web : basic security</title>
+	<meta charset="UTF-8">
+</head>
+<body>
+	<h1>Spring security: simple login</h1>
+	<p>This is a protected admin page</p>
+   	<form th:action="@{/logout}" method="post">
+            <input type="submit" value="Log Out"/>
+        </form>
+</body>
+</html>

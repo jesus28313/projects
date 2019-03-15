@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<meta charset="UTF-8">
+<title>Ejercicio</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+</head>
+</head>
+<body>
+	
+	<h1>Login form</h1>
+	<form th:action="@{/login}" method="post">
+		<div>
+			<label> User Name: </label>
+		</div>
+		<div>
+			<input type="text" name="username" />
+		</div>
+		<div>
+			<label> Password: </label>
+		</div>
+		<div>
+			<input type="password" name="password" />
+		</div>
+		<div>
+			<input type="submit" value="Sign in" />
+		</div>
+	</form>
+	<a th:href="@{/greeter}">Try to go to greeter</a>
+	<div th:if="${param.error}">Login incorrect.</div>
+	<div th:if="${param.logout}">You have been logged out.</div>
+</body>
+</html>
